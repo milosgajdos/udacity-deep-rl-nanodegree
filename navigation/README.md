@@ -39,13 +39,16 @@ It's **highly advisable** to create a separate `Python` [virtual environment](ht
 
 **Note:** Udacity guide recommends using the [Conda](https://conda.io/) `Python` distribution which overrides the system `Python` setup. The author of this repository refuses to mess with the system `Python` and was successful with setting up the workspace without using the Conda `Python` distribution.
 
-**Note:** When setting up the workspace locally on macOS you might encounter the following issues
+**Note:** When setting up the workspace locally on macOS you might encounter the following issues:
+
     - when installing `pip3 install -e '.[box2d]'`: `error: command 'swig' failed with exit status 1`
-      Fixi: `brew install cmake boost boost-python sdl2 swig`
+      FIX: `brew install cmake boost boost-python sdl2 swig`
+      
     - when installing `Python` requirements for Udacity DRLND: `Could not find a version that satisfies the requirement tensorflow==1.7.1 (from unityagents==0.4.0)`
-      Fix: `pip3 install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.7.1-py3-none-any.whl`
+      FIX: `pip3 install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.7.1-py3-none-any.whl`
+      
     - when installing `Python` requirements for Udacity DRLND: `Could not find a version that satisfies the requirement torch==0.4.0 (from unityagents==0.4.0) (from versions: 0.1.2, 0.1.2.post1, 0.4.1)`
-      Fix: `sed -i .bak 's/torch==0\.4\.0/torch==0\.4\.1/' ./python/requirements.txt`
+      FIX: `sed -i .bak 's/torch==0\.4\.0/torch==0\.4\.1/' ./python/requirements.txt`
 
 3. Download the environment from one of the links below. You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
@@ -63,9 +66,8 @@ It's **highly advisable** to create a separate `Python` [virtual environment](ht
 
 Once you have installed all depdencies run the following command which will start `jupyter` notebook and follow the instructions in `Navigation.ipynb` to get started with training the agent:
 
-**Note: The notebook in this repo has been used for training on a `Linux` machine. If you would like to train the agent on macOS you need to change the path to your Banana Unity environment in the notebook code!!!**
-
 ```
 jupyter notebook
 ```
 
+**Note: The notebook in this repo has been used for training on a `Linux` machine. If you would like to train the agent on macOS you need to change the path to your Banana Unity environment in the notebook code!!!**
